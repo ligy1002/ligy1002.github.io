@@ -13,6 +13,13 @@
 			<li><a href="04.jpg" onclick="showPic(this);return false">pic-4</a></li>
 		</ul>
 		<img id="placeholder" src="zhanweifu.jpg" />
-		<script type="text/javascript" src="ImageGallery.js"></script>
+		<script type="text/javascript">
+			function showPic(whichpic){
+	                         var source = whichpic.getAttribute("href");
+	                         var placeholder = document.getElementById("placeholder");
+	                         placeholder.setAttribute("src",source);
+                                }
+
+		</script>
 	</body>
 </html>
