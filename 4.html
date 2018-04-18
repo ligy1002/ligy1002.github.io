@@ -14,27 +14,34 @@
 		
 <ul>
 			
-<li><a href="01.jpg" onclick="showPic(this);return false">pic-1</a></li>
+<li><a href="01.jpg" onclick="showPic(this);return false" title="《当幸福来敲门》">pic-1</a></li>
 	
-<li><a href="02.jpg" onclick="showPic(this);return false">pic-2</a></li>
+<li><a href="02.jpg" onclick="showPic(this);return false" title="《我们仨》">pic-2</a></li>
 	
-<li><a href="03.jpg" onclick="showPic(this);return false">pic-3</a></li>
+<li><a href="03.jpg" onclick="showPic(this);return false" title="《肖申克的救赎》">pic-3</a></li>
 	
-<li><a href="04.jpg" onclick="showPic(this);return false">pic-4</a></li>
+<li><a href="04.jpg" onclick="showPic(this);return false" title="《总有人陪你颠沛流离》">pic-4</a></li>
 	
 </ul>
 		
-<img id="placeholder" src="zhanweifu.jpg" />
+<img id="placeholder" src="zhanweifu.jpg"  />
+<p id="description">竖中指++</p>		
 		
 <script type="text/javascript">
 	
 function showPic(whichpic){
 	                
-       var source = whichpic.getAttribute("href");
+        var source = whichpic.getAttribute("href");
 	                  
-       var placeholder = document.getElementById("placeholder");
+        var placeholder = document.getElementById("placeholder");
 	
-       placeholder.setAttribute("src",source);
+        placeholder.setAttribute("src",source);
+	
+	var text = document.getAttribute("title");
+	
+	var description = document.getElementById("description");
+	
+	description.firstChild.nodeValue = text;
          
                            }
 
