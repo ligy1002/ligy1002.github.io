@@ -3,7 +3,8 @@ function popUp(winURL){
 }
 window.onload = prepareLinks;
 function prepareLinks(){
-	var links = document.getElementByTagName("a");
+	if(!document.getElementsByTagName) return false;
+	var links = document.getElementsByTagName("a");
 	for(var i=0;i<links.length;i++){
 		if(links[i].getAttribute("class") == "popup"){
 			links[i].onclick = function(){
